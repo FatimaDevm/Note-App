@@ -35,11 +35,11 @@ class HomeScreen extends StatelessWidget {
                         contentPadding: const EdgeInsets.symmetric(
                             horizontal: 16, vertical: 8),
                         title: Text(
-                          note.text,
+                          note?.text ?? '',
                           style: TextStyle(fontWeight: FontWeight.bold),
                         ),
                         subtitle: Text(
-                          "${note.createdAt.toLocal()}".split('.')[0],
+                          "${note?.createdAt.toLocal()}".split('.')[0],
                           style: TextStyle(color: Colors.grey.shade600),
                         ),
                         trailing: IconButton(
